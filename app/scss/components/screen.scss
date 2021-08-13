@@ -1,0 +1,60 @@
+@use '../util' as *;
+@use 'button' as *;
+
+.screen {
+    width: 100%;
+    background-color: var(--dark-cyan);
+    padding: rem(50) rem(35) rem(35) rem(35);
+    border-radius: rem(10);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include breakpoint(large){
+        width: 50%;
+    }
+}
+
+.screen-grid {
+    display: grid;
+    grid-template-rows: rem(25);
+    line-height: 1;
+    padding-bottom: rem(50);
+    
+    &__labeltt{
+        grid-column: 1;
+        grid-row: 1;
+        color: var(--white);
+        font-size: rem(15);
+    }
+
+    &__labelst{
+        grid-column: 1;
+        grid-row: 2;
+        color: var(--dg-cyan-2);
+        font-size: rem(12);
+    }
+
+    &__amount {
+        grid-column: 2;
+        grid-row: 1 / span 2;
+        text-align: right;
+        line-height: 0.8;
+        color: var(--strong-cyan);
+        font-size: rem(45);
+        display:flex;
+        justify-content: flex-end;
+    }
+
+    &__amountsvg {
+    }
+
+    &__amountfig {
+    }
+
+}
+
+.reset-button {
+    @include button-style ($bg-color:var(--reset-button), $color:var(--dark-cyan));
+    font-weight: 700;
+}

@@ -1,0 +1,21 @@
+// Encountered an error when using mixin from a different file
+// https://stackoverflow.com/questions/66365150/when-importing-a-file-with-use-then-error-undefined-mixin/66366316
+
+@use '../util' as *;
+
+@mixin button-style ($bg-color: var(--dark-cyan), $color: var(--white)){
+    border-radius: rem(5);
+    padding: rem(6) 0;
+    color: $color;
+    background-color: $bg-color;
+    font-size: rem(23);
+    text-align: center;
+    cursor: pointer;
+
+    &:hover {
+        background-color: var(--strong-cyan);
+        color: var(--dark-cyan);
+        font-weight: 700;
+    }
+
+}

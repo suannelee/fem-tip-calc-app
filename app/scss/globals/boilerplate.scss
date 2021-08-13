@@ -1,0 +1,18 @@
+html {
+	font-size: rem(24);
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: var(--font-smono);
+	background: var(--lg-cyan-1);
+	min-height: 100vh;
+}

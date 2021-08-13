@@ -1,0 +1,24 @@
+@use '../util' as *;
+
+.calculator {
+    background-color: var(--white);
+    border-radius: rem(20);
+    display: flex;
+    flex-direction: column;
+    padding: rem(20);
+
+    @include breakpoint(small) {
+        margin: auto;
+        width: 80%;
+
+    }    
+
+    @include breakpoint(medium) {
+        flex-direction: row;
+        padding: rem(25);
+    }
+
+    @include breakpoint(large){
+        width: 60%;
+    }
+}

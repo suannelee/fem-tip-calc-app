@@ -1,0 +1,21 @@
+@use '../util' as *;
+
+.header {
+    margin: auto;
+    padding: rem(45) 0 rem(45) 0;
+
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    @include breakpoint(medium) { 
+        padding: rem(100) 0 rem(55) 0;
+    }
+    
+    @include breakpoint(large) { 
+        padding: rem(150) 0 rem(80) 0;
+    }
+}
